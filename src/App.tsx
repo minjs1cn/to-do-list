@@ -19,7 +19,7 @@ export default () => {
 						<Route exact path="/detail" component={Detail} />
 					</Switch>
 				</Layout.Content>
-				<Layout.Footer></Layout.Footer>
+				<Layout.Footer>111</Layout.Footer>
 			</Layout>
 		</BrowserRouter>
 	);
