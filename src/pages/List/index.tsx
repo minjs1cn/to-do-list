@@ -1,5 +1,10 @@
 import React from 'react';
+import ToDoList from '../../containers/ToDoList';
 
-export default () => {
-	return <div>list</div>;
-};
+export default function ListPage() {
+	return (
+		<>
+			<ToDoList />
+		</>
+	);
+}
