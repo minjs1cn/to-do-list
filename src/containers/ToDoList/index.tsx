@@ -6,7 +6,7 @@ import {
 	selectToDoList,
 	todoSlice,
 	EToDoStatus,
-} from '../../stores';
+} from '../../store';
 import ItemEditor from './ItemEditor';
 import ListHeader from './ListHeader';
 import ListItem from './ListItem';

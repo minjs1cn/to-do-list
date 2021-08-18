@@ -1,6 +1,6 @@
 import React from 'react';
 import { Space, Radio, Button } from 'antd';
-import { EToDoStatus } from '../../stores';
+import { EToDoStatus } from '../../store';
 
 interface IProps {
 	onAdd: () => void;

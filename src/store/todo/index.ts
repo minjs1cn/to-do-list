@@ -1,7 +1,12 @@
-import { createSelector, createSlice, PayloadAction } from '@reduxjs/toolkit';
+import {
+	createAsyncThunk,
+	createSelector,
+	createSlice,
+	PayloadAction,
+} from '@reduxjs/toolkit';
 import { findIndex } from 'lodash-es';
 import { nanoid } from 'nanoid';
-import { TAppState } from '..';
+import { TAppState, useAppDispatch } from '../store';
 import todoStorage from './todoStorage';
 
 export enum EToDoStatus {
@@ -29,6 +34,21 @@ const initialState: IToDoState = {
 	list: todoStorage.get(),
 	filter: EToDoStatus.All,
 };
+
+export const updateAsync =
+	(n: ITodoItem) => (dispatch: ReturnType<typeof useAppDispatch>) => {
+		setTimeout(() => {
+			dispatch(todoSlice.actions.update(n));
+		}, 2000);
+	};
+
+const updateTodoAsync = createAsyncThunk('todo/update2', () => {
+	return new Promise(resolve => {
+		setTimeout(resolve, 2000);
+	});
+});
+
+console.log(updateTodoAsync.fulfilled.type);
 
 export const todoSlice = createSlice({
 	name: 'todo',

@@ -1,14 +1,16 @@
-import { lazy, LazyExoticComponent } from 'react';
+import loadable, { LoadableComponent } from '@loadable/component';
 
-const Index = lazy(() => import('../pages/Index'));
-const List = lazy(() => import('../pages/List'));
+const Index = loadable(() => import('../pages/Index'));
+const List = loadable(() => import('../pages/List'));
 
 export interface IMenuItem {
 	key: string;
 	name: string;
 	path: string;
-	component: LazyExoticComponent<() => JSX.Element>;
+	component: LoadableComponent<unknown>;
 }
+
+export const BaseName = import.meta.env.BASE_URL;
 
 export default [
 	{

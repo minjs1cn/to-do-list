@@ -7,7 +7,7 @@ import {
 	todoSlice,
 	useAppDispatch,
 	useAppSelector,
-} from '../../stores';
+} from '../../store';
 
 interface IProps {
 	visible: boolean;

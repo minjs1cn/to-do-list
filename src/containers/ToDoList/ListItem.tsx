@@ -1,7 +1,7 @@
 import { List, Tag } from 'antd';
 import { Button } from 'antd/lib/radio';
 import React from 'react';
-import { EToDoStatus, ITodoItem } from '../../stores';
+import { EToDoStatus, ITodoItem } from '../../store';
 
 interface IProps {
 	item: ITodoItem;

@@ -3,9 +3,7 @@ import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import todo from './todo';
 import todoStorage from './todo/todoStorage';
 
-export * from './todo';
-
-const store = configureStore({
+export const store = configureStore({
 	reducer: {
 		todo,
 	},
@@ -15,8 +13,6 @@ store.subscribe(() => {
 	console.log(store.getState());
 	todoStorage.set(store.getState().todo.list);
 });
-
-export default store;
 
 export type TAppState = ReturnType<typeof store.getState>;
 export type TAppDispatch = typeof store.dispatch;
