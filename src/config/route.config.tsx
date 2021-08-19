@@ -1,7 +1,16 @@
-import loadable, { LoadableComponent } from '@loadable/component';
+import React from 'react';
+import loadable, {
+	DefaultComponent,
+	LoadableComponent,
+} from '@loadable/component';
 
-const Index = loadable(() => import('../pages/Index'));
-const List = loadable(() => import('../pages/List'));
+const Lazy = (fn: () => Promise<DefaultComponent<Element>>) =>
+	loadable(fn, {
+		fallback: <div>loading....</div>,
+	});
+
+const Index = Lazy(() => import('../pages/Index'));
+const List = Lazy(() => import('../pages/List'));
 
 export interface IMenuItem {
 	key: string;

@@ -42,13 +42,11 @@ export const updateAsync =
 		}, 2000);
 	};
 
-const updateTodoAsync = createAsyncThunk('todo/update2', () => {
+export const updateTodoAsync = createAsyncThunk('todo/update2', () => {
 	return new Promise(resolve => {
 		setTimeout(resolve, 2000);
 	});
 });
-
-console.log(updateTodoAsync.fulfilled.type);
 
 export const todoSlice = createSlice({
 	name: 'todo',
