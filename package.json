@@ -3,10 +3,18 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"license": "MIT",
+	"description": "基于 react react-router-dom react-redux antd 构建一个经典 to-do-list 项目",
+	"keywords": [
+		"react",
+		"react-router-dom",
+		"react-redux",
+		"redux toolkit"
+	],
 	"repository": {
 		"url": "https://github.com/minjs1cn/to-do-list",
 		"type": "github"
 	},
+	"homepage": "https://minjs1cn.github.io/to-do-list/",
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build"
