@@ -1,0 +1,1 @@
+import{R as e,T as t}from"./vendor.17d44631.js";function r(){return e.createElement(t,null,e.createElement(t.Title,{level:3},"My To Do List"),e.createElement(t.Paragraph,null,"record what you want to do"))}export{r as default};
